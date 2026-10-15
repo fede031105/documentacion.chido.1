@@ -18,7 +18,7 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
-# Copiar el archivo .jar generado desde la etapa de compilació
+# Copiar el archivo .jar generado desde la etapa de compilaci
 COPY --from=build /app/target/*.jar app.jar
 
 # Exponer el puerto 8081
