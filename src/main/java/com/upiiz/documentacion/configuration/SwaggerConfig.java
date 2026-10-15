@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
         info = @Info(
                 title = "API de Soporte EAM",
                 description = "Documentación de endpoints para la gestión de tickets de soporte técnico.",
-                version = "1.0.0", // Versión inicial[cite: 1]
+                version = "1.0.0",
                 contact = @Contact(
                         name = "Federico Sánchez Ibarra",
                         email = "federico.sanchez@example.com",
@@ -24,8 +24,9 @@ import org.springframework.context.annotation.Configuration;
                 )
         ),
         servers = {
-                @Server(url = "http://localhost:8080", description = "Servidor Local de Pruebas"),
-                @Server(url = "https://tu-servicio-api.onrender.com", description = "Servidor de Producción (Render)")
+                @Server(url = "/", description = "Servidor Actual"),
+                @Server(url = "https://documentacion-chido-1.onrender.com", description = "Servidor de Producción (Render)"),
+                @Server(url = "http://localhost:8081", description = "Servidor Local")
         }
 )
 public class SwaggerConfig {
